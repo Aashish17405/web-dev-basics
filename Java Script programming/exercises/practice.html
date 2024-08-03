@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        .heads,.tails{
+            border: none;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            width: 160px;
+            height: 160px;
+            border-radius: 80px;
+            font-size: 25px;
+            font-family: Arial;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="heads" onclick="headtail('Heads')">Heads</button>
+    <button class="tails" onclick="headtail('Tails')">Tails</button>
+
+    <button class="js-heads" onclick="document.querySelector('.js-render').innerHTML='Heads'">eas</button>
+    <button class="js-tails" onclick="document.querySelector('.js-render').innerHTML='Tails'">ais</button>
+    <p class="js-render"></p>
+
+    <input onkeydown="checkenter(event)" type="text" class="js-tb"><button onclick="
+    document.querySelector('.js-tbr').innerHTML=`Hello ${document.querySelector('.js-tb').value}`" >Wish</button>
+    <p class="js-tbr"></p>
+
+    <script>
+        //Variables and conditional statements
+        /*
+        const coffee=5;
+        const bagels=3;
+        const soup=9;
+        const total=coffee+bagels+soup;
+        console.log(`Cost of food:${total}`);
+        console.log(`Cost after taxes:${(total*0.1)+total}`);
+        */
+
+        /*
+        const name='Aashish';
+        const hour=19;
+        if(hour>6 && hour<12){
+            console.log(`${name} Good Morning!`)
+        }else if(hour>13 && hour<17){
+            console.log(`${name} Good Afternoon!`)
+        }else{
+            console.log(`${name} Good Night!`)
+        }
+        */
+
+        /*
+        const age=6;
+        const isHoliday=true;
+        if(age>=65 || age<=6){
+            if(isHoliday===false){
+                console.log('Discount');}
+            else{
+                console.log('No Discount')
+            }
+        }else if(age>6 && age<65){
+            console.log('No Discount')
+        };
+        */
+
+        /*
+        let str='';
+        const variable=Math.random();
+        let mg='Heads';
+        variable<0.5?str='Heads':str='Tails';
+        mg===str?console.log("You Win!"):console.log("You Lose!");
+        */
+
+        //Functions
+        /*
+        function greet(name){
+            if(!name){
+                return `Hello there!`;
+            }
+            return `Hello ${name}`;
+        };
+        console.log(greet());
+
+        function convertToFarenheit(celcius){
+            return (celcius*9/5)+32;
+        };
+        console.log(convertToFarenheit(25));
+
+        function convertToCelcius(farenheit){
+            return (farenheit-32)*5/9;
+        };
+        console.log(convertToCelcius(86));
+
+        function convertTemperature(degrees,units){
+            if(units==='C'){
+                console.log(convertToFarenheit(degrees));
+            }else if(units==='F'){
+                console.log(convertToCelcius(degrees));
+            };
+        };
+        convertTemperature(25,'C')
+        */
+
+        //Objects
+        /*
+        let obj={
+            name:'BasketBall',
+            cost:2095,
+        };
+        console.log(obj)
+        console.log(obj.cost+500);
+        obj.deliverytime='3days';
+        console.log(obj.deliverytime);
+
+        let obj1={
+            name:'BasketBall',
+            cost:2095
+        };
+        let obj2={
+            name:'Hoodie',
+            cost:2100
+        };
+        function compare(prod1,prod2){
+            if(prod1.cost>prod2.cost){
+                console.log(`Least priced product: ${prod2.name}`)
+            }else{
+                console.log(`Least priced product: ${prod1.name}`);
+            }
+        }
+        compare(obj1,obj2);
+
+        let obj3={
+            name:'Hoodie',
+            cost:2100
+        }
+        function sameprod(prod1,prod2){
+            if(prod1.cost===prod2.cost && prod1.name===prod2.name){
+                console.log('true')
+            }
+            else{
+                console.log('false')
+            }
+        };
+        sameprod(obj2,obj3)
+        console.log('AASHISH'.toLowerCase());
+        console.log('test'.repeat(2));
+        console.log(JSON.stringify(obj2));
+
+        let str;
+        let mg={
+            wins:0,
+            loses:0
+        };
+        function initialize(){
+            const win=localStorage.getItem('wins')
+            const lose=localStorage.getItem('loses');
+            mg.wins=win?JSON.parse(win):0;
+            mg.loses = lose ? JSON.parse(lose) : 0;
+        };
+        initialize();
+        function headtail(param){
+            const variabe=Math.random();
+            variabe<0.5?str='Heads':str='Tails';
+            param===str?console.log("You Win!"):console.log("You Lose!");
+            param===str?mg.wins++:mg.loses++;
+            console.log(`Wins:${mg.wins} Loses:${mg.loses}`);
+            let win = JSON.stringify(mg.wins);
+            let lose = JSON.stringify(mg.loses);
+            localStorage.setItem('wins', win);
+            localStorage.setItem('loses', lose);
+        }
+        */
+
+        //Document Object Model
+        const headb=document.querySelector('.js-heads');
+        const tailb=document.querySelector('.js-tails');
+        document.querySelector('.js-tails').innerHTML='Tails';
+        document.querySelector('.js-heads').innerHTML='Heads';
+        
+        function checkenter(event){
+            if(event.key==='Enter'){
+                document.querySelector('.js-tbr').innerHTML=`Hello ${document.querySelector('.js-tb').value}`
+            }
+            console.log('done')
+        };
+    </script>
+</body>
+</html>

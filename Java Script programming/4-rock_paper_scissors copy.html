@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+    <p>Rock Paper Scissors</p>
+    <button onclick="playGame('Rock');">Rock</button>
+    <button onclick="playGame('Paper');">Paper</button>
+    <button onclick="playGame('Scissors');">Scissors</button>
+
+    <script>
+        function playGame(playerMove){
+            const cmpmov=pickComputerMOve();
+            let res='';
+
+            if (playerMove==='Scissors'){
+                if(cmpmov==='Scissors'){
+                    res='Tie';
+                }else if(cmpmov==='Rock'){
+                    res='You lose';
+                }else if(cmpmov==='Paper'){
+                    res='You win';
+                }
+            }else if(playerMove==='Paper'){
+                if(cmpmov==='Paper'){
+                    res='Tie';
+                }else if(cmpmov==='Scissors'){
+                    res='You lose';
+                }else if(cmpmov==='Rock'){
+                    res='You win';
+                }
+            }else if(playerMove==='Rock'){
+                if(cmpmov==='Rock'){
+                    res='Tie';
+                }
+                else if(cmpmov==='Paper'){
+                    res='You lose';
+                }else if(cmpmov==='Scissors'){
+                    res='You win';
+                }
+            }
+            alert(`You picked ${playerMove} and computer picked ${cmpmov}.Hence ${res}`);
+        }
+        function pickComputerMOve(){
+            const b=Math.random();
+            
+            let cmpmov='';
+
+            if(b>=0 && b<1/3){
+                cmpmov='Rock';
+            }else if(b>=1/3 && b<2/3){
+                cmpmov='Paper';
+            }else{
+                cmpmov='Scissors';
+            }
+
+            return cmpmov;
+        }
+    </script>
+</body>
+</html>

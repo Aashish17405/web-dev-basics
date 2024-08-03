@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+</head>
+<body>  
+    <button class="js-button">Click</button>
+    <script>
+        const buttonElement=document.querySelector('.js-button');
+
+        const EventListener=()=>{
+            console.log('Click');
+        };
+        // buttonElement.addEventListener('click',EventListener);
+        
+        buttonElement.addEventListener('click',()=>{
+            console.log('Click2');
+        });
+
+        // buttonElement.removeEventListener('click',EventListener);
+
+        document.body.addEventListener('keydown',(event)=>{
+            if(event.key==='Enter'){
+                console.log('Click');
+            }
+        });
+
+        /*
+        function greeting(){
+            console.log('Hello')
+        };
+        greeting();
+
+        const num=2;
+        const function1=function(){
+            console.log('hello2');
+        };
+        console.log(function1);
+        console.log(typeof function1);
+
+        const obj1={
+            num:2,
+            fun: function(){
+                console.log('hello')
+            }
+        };
+        obj1.fun();
+
+        function run(param){
+            param();
+        };
+        run(function(){
+            console.log('hello4');
+        });
+        */
+
+        /*
+        setTimeout(function(){
+            console.log('timeout');
+        },5000);     //5000milliseconds
+
+        console.log('nextline');
+
+        setInterval(function(){
+            console.log('interval')
+        },3000);
+
+        console.log('next line 2');
+        */
+
+        /*[
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function(value,index){
+            if(value==='wash dishes'){
+                return;
+            }
+            console.log(index);
+            console.log(value);
+        })*/
+
+        /*
+        const regularFunction=function(param1,param2){
+            console.log(param1,param2)
+        };
+        regularFunction('hey','how r u');
+
+
+        const arrowFunction=(param1,param2)=>{
+            console.log(param1,param2);
+        };
+        arrowFunction('hello','nice to meet u');
+
+        const Oneparam = param =>{
+            console.log(param+1);
+        };
+        Oneparam(5)
+
+        const oneline = () => {return 2+3};
+        console.log(oneline());
+
+        //It is recommended to use arrow functions for "forEach" 
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach((value,index)=>{
+            if(value==='wash dishes'){
+                return;
+            }
+            console.log(index);
+            console.log(value);
+        });
+        */
+        console.log([1,-3,5].filter((value,index)=>{
+            return value>=0;;
+        }));
+
+        console.log([1,1,3].map((value,index)=>{
+            return value*2;
+        }));
+
+        console.log([1,1,3].map(value=>value*2));
+        
+    </script>
+</body>
+</html>

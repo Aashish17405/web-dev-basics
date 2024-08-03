@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+       /*const product={
+        name:'socks',
+        price:1090,
+       }; 
+       console.log(product);
+       console.log(product.price);
+       console.log(product.name);
+
+       product.name="cotton socks";
+       console.log(product.name);
+
+       product.newProperty=true;
+       console.log(product);
+
+       delete product.newProperty;
+       console.log(product);
+       */
+
+       /*const prod2={
+        name:'shirt',
+        ['delivery-time']:'1-day',
+        rating:{
+            stars:4.5,
+            count:87
+        },
+        fun: function function1(){
+            console.log('Function inside an object')
+        }
+       };
+       console.log(prod2.name);
+       console.log(prod2['name']);
+       console.log(prod2['delivery-time']);
+
+       console.log(prod2['rating']);
+       console.log(`Rating: ${prod2.rating.stars}`);
+       
+       prod2.fun();
+
+       console.log(typeof console.log);
+
+       console.log(JSON.stringify(prod2));
+       const json_string=JSON.stringify(prod2);
+       console.log(JSON.parse(json_string))*/
+
+       console.log('hello'.length);
+       console.log('hello'.toUpperCase());
+       console.log('hello'.toLowerCase());
+       
+       const object1={
+        message:'hello',
+       };
+       const obj2=object1;
+       object1.message='he';
+       console.log(object1);
+       console.log(obj2);  //it is because obj2=object1 line points obj2 to object1(by reference)
+
+       const obj3={
+        message:'good job!',
+       };
+       console.log(obj2===obj3);  //Here the address is checked not the value
+       console.log(obj2===object1);
+
+       const obj4={
+        message:'HElo',
+        price:799
+       };
+       //const message = obj4.message;
+       const{message,price}=obj4;
+       console.log(message);
+       console.log(price);
+
+       const obj5={
+        //message:message,  
+        message,   //both the lines are same
+        // method:function function1(){
+        //     console.log('method');
+        // }
+        method(){
+            console.log('method');
+        }
+       };
+       console.log(obj5);
+       obj5.method();
+    </script>
+</body>
+</html>

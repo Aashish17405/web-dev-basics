@@ -1,0 +1,81 @@
+.heading{
+    color: rgb(32, 182, 50);
+}
+button{
+    background-color: green;
+    border: none;
+}
+
+h3{
+    text-align: center;
+    text-decoration: rgb(0, 255, 60) dotted underline;
+    font-weight: normal;
+    font-size: 40px;
+}
+.abc{
+    text-align: left;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: capitalize;
+    
+}
+a{
+    text-decoration: none;
+    height: 100px;
+}
+
+
+.boxmodel{
+    color: red;
+    background-color: rgb(196, 189, 189);
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    text-align: center;
+    /* border-width: 2px;
+    border-style: dotted;
+    border-color: brown; */
+    border: 2px dotted brown;
+    border-radius: 10px;
+
+    /* Padding */
+    /* padding-top: 50px;
+    padding-right: 10px;   
+    padding-bottom: 10px;
+    padding-left: 10px; */
+    /* shortform: */
+    padding: 50px 10px 10px 10px;
+
+    /* margin: */
+    margin-top:50px;
+    margin-left: 50px;
+}
+
+.display{
+    background-color: azure;
+    color: rgba(255, 0, 0, 0.5); /* 0.5 is opacity */
+    /* display: inline-block; */
+    /* visibility: hidden; */
+}
+
+.position{
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    display: inline-block;
+    border: 2px;
+}
+#box1{
+    position: relative;
+    top: 50px;
+    right: 50px;
+    left: 50px;
+    bottom: 50px;
+    background-image: url("cat.jpg");
+    height: 200px;
+    width: 150px;
+    background-size: cover;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>  
+    <script>
+        //Arrays:
+        // const arr=[10,20,30];
+        // console.log(arr[1]);
+        // console.log(arr.length);
+        
+        // arr.push(100);
+        // console.log(arr);
+        
+        // arr.splice(0,1);   //remove one element 
+        // console.log(arr);
+
+        //Loops:
+        /*let i=1;
+        while(i<5){
+            console.log(i);
+            i++;
+        }
+
+        for(let i=1;i<=5;i++){
+            console.log(i);
+        }
+
+        let random=0;
+        while(random<0.5){
+            random=Math.random();
+            console.log(random);
+        }*/
+
+        /*const todoList=['make dinner','wash dishes','watch youtube'];
+        for(let i=0;i<todoList.length;i++){
+            console.log(todoList[i]);
+        }*/
+
+        // const ar=[1,1,2];
+        // const ar2=[];
+        // for(let i=0;i<ar.length;i++){
+        //     ar2.push(ar[i]*2);
+        // }
+        // console.log(ar2);
+
+        const array1=[1,2,3];
+        const array2=array1.slice();
+        array2.push(4);
+        console.log(array1);
+        console.log(array2);
+
+        const [i,j]=[1,2,3];
+        console.log(i,j);
+
+        for(let i=1;i<=10;i++){
+            if(i%3===0){
+                continue;
+            };
+            if(i===8){
+                break;
+            }
+            console.log(i);
+        }
+    </script>
+</body>
+</html>
